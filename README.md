@@ -45,7 +45,7 @@ AI helps me quickly generate market analysis, identify potential trade ideas, an
 
 ## Tool Account :
 
-![Claude Project](images/claude-project.png)
+![Claude Project](images/claude_project.png)
 
 
 ## Academy Enrollment :
