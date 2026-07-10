@@ -43,5 +43,20 @@ Within 10–15 minutes, I receive a clear summary of the topic, explanations of 
 Success Definition:
 AI helps me quickly generate market analysis, identify potential trade ideas, and summarize economic or technical factors affecting the market. I critically review every suggestion and make all final trading decisions based on my own analysis and risk management strategy.
 
+## Tool Account :
+
+![Claude Project](images/claude-project.png)
 
 
+## Academy Enrollment :
+
+https://verify.skilljar.com/c/fc4vtg222bog
+
+
+
+# Diligence Statement
+In developing this workflow audit and related AI Fluency project materials, I collaborated with Claude (Anthropic) and ChatGPT (OpenAI) as thinking partners throughout the planning, drafting, review, and refinement process.
+Claude primarily assisted with brainstorming ideas, organizing project structure, refining written content, and encouraging reflective thinking about my workflow and AI collaboration. ChatGPT supported the project by helping me clarify objectives, identify missing information, critique drafts, refine prompts, improve structure, and strengthen the overall quality and consistency of my work. Rather than simply generating answers, both AI systems were used to help me think through problems, evaluate alternatives, and improve my reasoning before finalizing each deliverable.
+Throughout the project, I provided the project goals, personal experiences, and supporting information used to create the final work. I reviewed, evaluated, and refined all AI-generated and AI-assisted content to ensure it accurately reflected my own understanding, intentions, and experiences. Whenever necessary, I modified, rejected, or expanded AI suggestions to maintain accuracy and authenticity.
+The final workflow audit, project instructions, and supporting materials represent my own understanding and judgment. While AI played an important role in helping me organize ideas, challenge assumptions, and improve the quality of my work, I accept full responsibility for the accuracy, completeness, and presentation of the final deliverables.
+This statement is provided in the spirit of transparency and to acknowledge the role of AI as a collaborative partner in my learning process while affirming my responsibility for the final outcome.
