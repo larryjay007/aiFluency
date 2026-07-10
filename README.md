@@ -1,30 +1,25 @@
 # aiFluency
 
-| Task                                                         | Classification                    | Rationale                                                                                                                                                                    |
-| ------------------------------------------------------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Attending lectures and taking notes                          | **Just Me**                       | Requires my full attention, understanding, and active participation; AI cannot replace                                                                                                      the learning process.        
+## Workflow Audit
 
-| Writing assignment reports                                   | **Collaborate with AI (Centaur)** | AI helps me organize ideas, improve structure, and refine writing, while I contribute                                                                                                       the analysis, examples, and final decisions.
+The table below summarizes the recurring tasks I perform in a typical week. Each task is classified according to the AI Fluency delegation framework based on the level of AI involvement that best supports quality, learning, and responsible decision-making.
 
-| Coding practice and debugging (Go, Rust, TypeScript, Python) | **Collaborate with AI (Centaur)** | AI can explain errors, suggest solutions, and review my code, but I must understand                                                                                                         the implementation and write the final solution.
+## Workflow Audit
 
-| Researching Machine Learning and AI concepts                 | **Delegate to AI with Review**    | AI can summarize documentation and explain concepts quickly, but I verify important                                                                                                         details and deepen my understanding.
-
-| Working on open-source GitHub issues and pull requests       | **Collaborate with AI (Centaur)** | AI assists with understanding repositories, discussing implementation approaches,                                                                                                           reviewing code, and improving documentation.
-
-| Writing documentation and README files                       | **Collaborate with AI (Centaur)** | AI helps improve clarity, grammar, and structure, while I ensure the documentation                                                                                                          accurately reflects the project.
-
-| Checking and replying to emails                              | **Delegate to AI with Review**    | AI can draft responses and summarize email threads, but I review them for accuracy,                                                                                                         professionalism, and tone before sending.
-
-| Creating LinkedIn posts and updating my portfolio            | **Collaborate with AI (Centaur)** | AI helps organize ideas and improve writing, but I provide my experiences,                                                                                                                  achievements, and final message.
-
-| Trading Forex and analyzing the market                       | **Collaborate with AI (Centaur)** | AI supports market research, technical analysis, and idea generation, but I remain                                                                                                          responsible for every trading decision because it involves financial risk.
-
-| Cooking and meal preparation                                 | **Just Me**                       | AI can suggest recipes or cooking tips, but the preparation, taste, and execution are                                                                                                       entirely my responsibility.
-
-| Exercise and physical fitness                                | **Just Me**                       | AI can recommend routines and track progress, but only I can perform the physical                                                                                                           activity and maintain consistency.
-
-| Personal reflection and career planning                      | **Just Me**                       | AI can help me think through options, but my long-term goals, values, and career                                                                                                            decisions must come from my own judgment.                                              
+| Task | Classification | Rationale |
+|------|----------------|-----------|
+| Attending lectures and taking notes | **Just Me** | Requires my full attention, understanding, and active participation; AI cannot replace the learning process. |
+| Writing assignment reports | **Collaborate with AI (Centaur)** | AI helps me organize ideas, improve structure, and refine writing, while I contribute the analysis, examples, and final decisions. |
+| Coding practice and debugging (Go, Rust, TypeScript, Python) | **Collaborate with AI (Centaur)** | AI can explain errors, suggest solutions, and review my code, but I must understand the implementation and write the final solution. |
+| Researching Machine Learning and AI concepts | **Delegate to AI with Review** | AI can summarize documentation and explain concepts quickly, but I verify important details and deepen my understanding. |
+| Working on open-source GitHub issues and pull requests | **Collaborate with AI (Centaur)** | AI assists with understanding repositories, discussing implementation approaches, reviewing code, and improving documentation, while I implement, test, and submit the work. |
+| Writing documentation and README files | **Collaborate with AI (Centaur)** | AI helps improve clarity, grammar, and structure, while I ensure the documentation accurately reflects the project. |
+| Checking and replying to emails | **Delegate to AI with Review** | AI can draft responses and summarize email threads, but I review them for accuracy, professionalism, and tone before sending. |
+| Creating LinkedIn posts and updating my portfolio | **Collaborate with AI (Centaur)** | AI helps organize ideas and improve writing, but I provide my experiences, achievements, and final message. |
+| Trading Forex and analyzing the market | **Collaborate with AI (Centaur)** | AI supports market research, technical analysis, and idea generation, but I remain responsible for every trading decision because it involves financial risk. |
+| Cooking and meal preparation | **Just Me** | AI can suggest recipes or cooking tips, but the preparation, taste, and execution are entirely my responsibility. |
+| Exercise and physical fitness | **Just Me** | AI can recommend routines and track progress, but only I can perform the physical activity and maintain consistency. |
+| Personal reflection and career planning | **Just Me** | AI can help me think through options, but my long-term goals, values, and career decisions must come from my own judgment. |
 
 ## Three target task includes :
 
