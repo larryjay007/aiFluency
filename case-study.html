@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Lanre Odesanya</title>
+<meta name="description" content="Two real checks: catching a correlation that looked stable for the wrong reason, and a model that ignored a feature I assumed would matter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="mark" href="index.html">LANRE ODESANYA</a>
+    <ul>
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="case-study.html" aria-current="page">Case Study</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="case-header">
+  <div class="wrap">
+    <div class="eyebrow">Case Study 01</div>
+    <h1>The "0 rows removed" result that looked fine — until it wasn't.</h1>
+    <p class="sub">From an early exercise on a 30,000-page anonymized content dataset: a correlation stayed identical before and after a filter. The stable number looked like an answer. It was actually a question I hadn't asked yet.</p>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <h2>Check 1 — Why didn't the filter change anything?</h2>
+
+    <div class="finding flagged">
+      <span class="tag">What I saw</span>
+      <p>An initial pass measured the correlation between a keyword's search volume and the actual page impressions it produced. The result was near zero (0.001) — search volume barely predicted real traffic.</p>
+    </div>
+
+    <div class="finding flagged">
+      <span class="tag">What I questioned</span>
+      <p>The next step was to re-run that same correlation, but restricted to only pages that had recorded at least one real impression — to see if removing "invisible" pages changed the relationship.</p>
+    </div>
+
+    <div class="finding flagged">
+      <span class="tag">What I found</span>
+      <p>The filter removed exactly zero rows. 30,000 pages before, 30,000 pages after. The correlation stayed at 0.001, unchanged.</p>
+    </div>
+
+    <div class="finding verified">
+      <span class="tag">Why it mattered</span>
+      <p>An unchanged result is easy to read as "the relationship holds either way." That reading would have been wrong. The real explanation was structural: this dataset was already pre-filtered to only include pages with measured impressions — there was no zero-impression subset left to remove in the first place.</p>
+    </div>
+
+    <div class="finding verified">
+      <span class="tag">The outcome</span>
+      <p>The write-up was corrected before it went anywhere: not "filtering confirms no relationship," but "the filter was a no-op on this dataset, so this comparison can't confirm anything either way." Less satisfying. More true.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>Check 2 — Does a model actually use the feature I hand it?</h2>
+
+    <div class="finding flagged">
+      <span class="tag">What I saw</span>
+      <p>A shallow decision tree, trained to flag declining pages, split first on a page's recorded impressions — a reasonable, expected first split.</p>
+    </div>
+
+    <div class="finding flagged">
+      <span class="tag">What I questioned</span>
+      <p>I swapped that feature out for a different one — a page's engagement rate — assuming it was at least as informative, maybe more.</p>
+    </div>
+
+    <div class="finding verified">
+      <span class="tag">What I found</span>
+      <p>Engagement rate never appeared in either split of the resulting tree. The model preferred two other signals — a page's average search position and its content age — over the feature I'd expected it to lean on.</p>
+    </div>
+
+    <div class="finding verified">
+      <span class="tag">Why it mattered</span>
+      <p>It would have been easy to assume a plausible-sounding feature was doing work just because it was available. The tree's actual structure said otherwise — and the only way to know that was to read it, not just trust that adding a "good" feature helped.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="closing-note">This is the kind of check I run on every result before I trust it — not "does this look right," but "what would have to be true for this to look right, and is it?"</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Lanre Odesanya — built plain, on purpose. No framework, no build step.
+  </div>
+</footer>
+
+</body>
+</html>

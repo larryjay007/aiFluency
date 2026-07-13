@@ -1,0 +1,389 @@
+/* ============================================
+   Lanre Odesanya — Portfolio
+   Plain CSS. No build step, no framework.
+   ============================================ */
+
+:root {
+  --ink: #1A2733;
+  --paper: #EDEEE7;
+  --paper-dim: #E2E3DA;
+  --flag: #C1442E;
+  --verify: #2F6F62;
+  --line: #C9CCC2;
+  --ink-soft: #4B5763;
+
+  --display: 'Space Grotesk', sans-serif;
+  --body: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Nav ---------- */
+
+.site-nav {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.site-nav .mark {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-nav .mark::before {
+  content: "+ ";
+  color: var(--flag);
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a.nav-link {
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a.nav-link:hover,
+.site-nav a.nav-link[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--flag);
+}
+
+/* ---------- Eyebrow / labels ---------- */
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: var(--flag);
+  display: inline-block;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 90px 0 70px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.12;
+  margin: 0 0 22px;
+  letter-spacing: -0.01em;
+}
+
+.hero .lede {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin: 0 0 34px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 12px 20px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn.primary {
+  background: var(--flag);
+  border-color: var(--flag);
+  color: var(--paper);
+}
+
+.btn.primary:hover {
+  background: #a3341f;
+  border-color: #a3341f;
+}
+
+/* ---------- Sections ---------- */
+
+section.block {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section.block:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: 26px;
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-family: var(--display);
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+p { margin: 0 0 16px; }
+
+/* ---------- Teaser card on home ---------- */
+
+.teaser {
+  position: relative;
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+  margin-top: 44px;
+  background: rgba(255,255,255,0.35);
+}
+
+.teaser::before, .teaser::after {
+  content: "+";
+  position: absolute;
+  font-family: var(--mono);
+  color: var(--flag);
+  font-size: 14px;
+  top: 6px;
+}
+.teaser::before { left: 6px; }
+.teaser::after { right: 6px; }
+
+.teaser .tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--verify);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.teaser p {
+  margin-bottom: 14px;
+}
+
+.teaser a {
+  font-family: var(--mono);
+  font-size: 13px;
+  text-decoration: underline;
+  text-decoration-color: var(--flag);
+  text-underline-offset: 3px;
+}
+
+/* ---------- Case study finding blocks ---------- */
+
+.finding {
+  position: relative;
+  border-left: 2px solid var(--line);
+  padding: 4px 0 4px 22px;
+  margin-bottom: 28px;
+}
+
+.finding .tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.finding.flagged {
+  border-left-color: var(--flag);
+}
+.finding.flagged .tag {
+  color: var(--flag);
+  border: 1px solid var(--flag);
+}
+
+.finding.verified {
+  border-left-color: var(--verify);
+}
+.finding.verified .tag {
+  color: var(--verify);
+  border: 1px solid var(--verify);
+}
+
+.case-header {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-header .eyebrow { margin-bottom: 18px; }
+
+.case-header h1 {
+  font-family: var(--display);
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.case-header .sub {
+  color: var(--ink-soft);
+  font-size: 17px;
+  max-width: 56ch;
+}
+
+.closing-note {
+  font-family: var(--mono);
+  font-size: 14px;
+  border-top: 1px dashed var(--line);
+  padding-top: 20px;
+  margin-top: 10px;
+  color: var(--ink);
+}
+
+.closing-note::before {
+  content: "// ";
+  color: var(--flag);
+}
+
+/* ---------- About ---------- */
+
+.bio-block {
+  font-size: 17px;
+}
+
+.bio-block .quote-line {
+  border-left: 2px solid var(--flag);
+  padding-left: 20px;
+  margin: 24px 0;
+  font-style: normal;
+  color: var(--ink);
+}
+
+.status-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 30px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verify);
+  display: inline-block;
+}
+
+/* ---------- Contact ---------- */
+
+.contact-block {
+  padding: 90px 0;
+  text-align: left;
+}
+
+.contact-block h1 {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 20px;
+}
+
+.contact-block .lede {
+  color: var(--ink-soft);
+  font-size: 17px;
+  max-width: 52ch;
+  margin-bottom: 36px;
+}
+
+.email-line {
+  font-family: var(--mono);
+  font-size: 15px;
+  margin-top: 24px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0 60px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px) {
+  .site-nav ul { gap: 16px; }
+  .hero { padding: 60px 0 50px; }
+  section.block { padding: 44px 0; }
+}
