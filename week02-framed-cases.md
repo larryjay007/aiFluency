@@ -53,4 +53,6 @@ If you're about to trust an ML result you can't fully evaluate yourself, that's 
 > "I leverage data-driven insights to deliver results-driven solutions that drive impactful outcomes for stakeholders."
 
 **Edited version:**
+> "When a result looks fine, I check what would have to be true for that to actually be the case — and I say so plainly when it isn't."
 >
+
