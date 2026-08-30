@@ -8,13 +8,12 @@
   --paper: #EDEEE7;
   --paper-dim: #E2E3DA;
   --flag: #C1442E;
-  --verify: #2F6F62;
   --line: #C9CCC2;
   --ink-soft: #4B5763;
 
   --display: 'Space Grotesk', sans-serif;
   --body: 'IBM Plex Sans', sans-serif;
-  --mono: 'IBM Plex Mono', monospace;
+  --mono: 'IBM Plex Sans', sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -224,7 +223,7 @@ p { margin: 0 0 16px; }
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--verify);
+  color: var(--ink);
   text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
@@ -270,11 +269,11 @@ p { margin: 0 0 16px; }
 }
 
 .finding.verified {
-  border-left-color: var(--verify);
+  border-left-color: var(--ink);
 }
 .finding.verified .tag {
-  color: var(--verify);
-  border: 1px solid var(--verify);
+  color: var(--ink);
+  border: 1px solid var(--ink);
 }
 
 .case-header {
@@ -311,6 +310,38 @@ p { margin: 0 0 16px; }
   color: var(--flag);
 }
 
+/* ---------- Proof screenshots (case study) ---------- */
+
+.proof-shot {
+  margin: 20px 0 28px 22px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.5);
+}
+
+.proof-shot img {
+  width: 100%;
+  display: block;
+}
+
+.proof-shot figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  padding: 8px 12px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- About photo ---------- */
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
 /* ---------- About ---------- */
 
 .bio-block {
@@ -339,7 +370,7 @@ p { margin: 0 0 16px; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--verify);
+  background: var(--ink);
   display: inline-block;
 }
 
@@ -368,6 +399,54 @@ p { margin: 0 0 16px; }
   font-size: 15px;
   margin-top: 24px;
   color: var(--ink-soft);
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+  margin-top: 30px;
+}
+
+.contact-form label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--body);
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.5);
+  color: var(--ink);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--flag);
+}
+
+.contact-form button {
+  margin-top: 20px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.form-status {
+  font-family: var(--mono);
+  font-size: 14px;
+  margin-top: 24px;
+  color: var(--ink);
 }
 
 /* ---------- Footer ---------- */
