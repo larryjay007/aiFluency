@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Lanre Odesanya</title>
+<meta name="description" content="Let's make sure your model outputs are reliable before they ship.">
+<meta property="og:title" content="Contact — Lanre Odesanya">
+<meta property="og:description" content="Let's make sure your model outputs are reliable before they ship.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://larryjay007.github.io/aiFluency/contact.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact — Lanre Odesanya">
+<meta name="twitter:description" content="Let's make sure your model outputs are reliable before they ship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="mark" href="index.html">LANRE ODESANYA</a>
+    <ul>
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="case-study.html">Case Study</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section class="contact-block">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Let's make sure your model's output is reliable before it ships.</h1>
+    <p class="lede">If you're a founder about to trust an ML result you can't fully evaluate yourself, that's exactly what this is for.</p>
+
+    <form id="contact-form" action="https://formspree.io/f/xkjnglgb" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">What's the result you'd like checked?</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit" class="btn primary">Send →</button>
+    </form>
+
+    <p id="form-status" class="form-status" hidden></p>
+
+    <div class="email-line">Or email directly: Odesanyalanre3@gmail.com</div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (submitBtn.disabled) return;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.hidden = true;
+        status.hidden = false;
+        status.textContent = "Thanks — that reached me. I'll get back to you soon.";
+      } else {
+        status.hidden = false;
+        status.textContent = "Something went wrong — please email me directly instead.";
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send →';
+      }
+    } catch (error) {
+      status.hidden = false;
+      status.textContent = "Something went wrong — please email me directly instead.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
+    }
+  });
+</script>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Lanre Odesanya — built plain, on purpose. No framework, no build step.
+  </div>
+</footer>
+
+</body>
+</html>
