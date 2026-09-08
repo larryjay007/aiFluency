@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Lanre Odesanya</title>
 <meta name="description" content="Let's make sure your model outputs are reliable before they ship.">
+<meta property="og:title" content="Contact — Lanre Odesanya">
+<meta property="og:description" content="Let's make sure your model outputs are reliable before they ship.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://larryjay007.github.io/aiFluency/contact.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact — Lanre Odesanya">
+<meta name="twitter:description" content="Let's make sure your model outputs are reliable before they ship.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -53,8 +60,12 @@
 <script>
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
+  const submitBtn = form.querySelector('button[type="submit"]');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitBtn.disabled) return;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
     const data = new FormData(form);
     try {
       const response = await fetch(form.action, {
@@ -69,10 +80,14 @@
       } else {
         status.hidden = false;
         status.textContent = "Something went wrong — please email me directly instead.";
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send →';
       }
     } catch (error) {
       status.hidden = false;
       status.textContent = "Something went wrong — please email me directly instead.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
     }
   });
 </script>
